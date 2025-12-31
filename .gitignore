@@ -1,0 +1,74 @@
+# API Anahtarı ve Hassas Bilgiler
+.env
+*.env
+
+# Checkpoint dosyası (geçici)
+checkpoint.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node.js
+node_modules/
+.npm
+.pnpm-store
+
+# Next.js
+.next/
+out/
+dist/
+
+# Frontend build
+frontend/.next/
+frontend/node_modules/
+frontend/.npm
+frontend/out/
+frontend/dist/
+
+# Large data files (will be tracked with Git LFS)
+# These are explicitly tracked, not ignored
