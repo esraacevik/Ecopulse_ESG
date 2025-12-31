@@ -1,0 +1,10 @@
+[
+  {
+    "category": "Enerji",
+    "electricity_kwh": 300.0,
+    "natural_gas_m3": 20.0,
+    "region": "TR",
+    "period": "Aylık",
+    "timestamp": "2025-12-21 19:35"
+  }
+]
