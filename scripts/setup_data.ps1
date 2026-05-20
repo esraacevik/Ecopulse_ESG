@@ -4,7 +4,7 @@
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
 $DataDir = Join-Path $ProjectRoot "data"
 
-Write-Host "=== ESG_project Veri Kurulumu ===" -ForegroundColor Cyan
+Write-Host "=== Ecopulse_ESG Veri Kurulumu ===" -ForegroundColor Cyan
 Write-Host ""
 
 $required = @("scope1_data.json", "scope2_data.json", "summary.json")

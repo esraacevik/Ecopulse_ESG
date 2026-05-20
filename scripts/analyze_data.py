@@ -8,7 +8,7 @@ import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
-# Proje kökü: scripts/ -> ESG_project/
+# Proje kökü: scripts/ -> depo kökü
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 

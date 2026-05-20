@@ -4,7 +4,7 @@
 ## Kapsamlı Proje Analizi ve Strateji Dokümanı
 
 <sub>LLM Destekli Gerçek Zamanlı Sürdürülebilirlik ve Karbon Risk Analiz Asistanı</sub>
-
+ 
 ---
 
 | 📋 Versiyon | 📅 Tarih | 🏷️ Durum |

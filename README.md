@@ -2,9 +2,8 @@
 
 **AI-Powered Carbon Footprint Calculator & ESG Reporting Platform**
 
-> **Proje kök dizini:** `ESG_project/`  
-> Kurulum ve çalıştırma komutlarının tamamı bu klasörün içinden çalıştırılmalıdır.  
-> (Üst klasör `Ecopulse_ESG/` yalnızca sarmalayıcıdır; GitHub reposu için `ESG_project/` içeriğini kök olarak kullanın.)
+> **Proje kök dizini:** depo kökü (`Ecopulse_ESG/` — klonladığınız klasör).  
+> Kurulum ve çalıştırma komutlarının tamamı bu dizinden çalıştırılmalıdır.
 
 Bu depo, ECOLOGIA sürdürülebilirlik ve ESG platformunun teknik uygulamasını içerir.
 
@@ -72,7 +71,7 @@ OPENWEATHER_API_KEY=your_openweather_api_key
 
 ## ▶️ Çalıştırma
 
-Tüm komutlar **proje kökünden** (`ESG_project/`) başlar.
+Tüm komutlar **depo kökünden** başlar (README’nin bulunduğu klasör).
 
 ### Backend (Port 8000)
 
@@ -127,7 +126,7 @@ python scripts/analyze_data.py
 ## 📁 Proje Yapısı
 
 ```
-ESG_project/
+Ecopulse_ESG/                   # Depo kökü (GitHub ile aynı yapı)
 ├── backend/                    # FastAPI Backend
 │   ├── app/
 │   │   ├── main.py            # Ana uygulama

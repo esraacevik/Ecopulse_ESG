@@ -1,4 +1,4 @@
-# Cache Temizleme Script — ESG_project
+# Cache Temizleme Script — Ecopulse_ESG
 # Proje kökünden veya herhangi bir yerden çalıştırılabilir.
 
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
