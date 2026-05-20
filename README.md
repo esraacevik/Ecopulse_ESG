@@ -25,13 +25,13 @@ Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hede
 ## 📋 İçindekiler
 
 - [Proje Dokümantasyonu](#-proje-dokümantasyonu)
-- [ECHO! Ekibi](#-echo-ekibi)
 - [Kurulum](#kurulum)
 - [Çalıştırma](#çalıştırma)
 - [Proje Yapısı](#proje-yapısı)
 - [API Endpoints](#api-endpoints)
 - [Özellikler](#özellikler)
 - [Teknolojiler](#teknolojiler)
+- [ECHO! Ekibi](#-echo-ekibi)
 
 ---
 
