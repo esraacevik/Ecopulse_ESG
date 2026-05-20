@@ -6,10 +6,38 @@
 > Kurulum ve çalıştırma komutlarının tamamı bu klasörün içinden çalıştırılmalıdır.  
 > (Üst klasör `Ecopulse_ESG/` yalnızca sarmalayıcıdır; GitHub reposu için `ESG_project/` içeriğini kök olarak kullanın.)
 
+Bu depo, **ECHO!** ekibi tarafından geliştirilen ECOLOGIA sürdürülebilirlik ve ESG platformunun teknik uygulamasını içerir.
+
+---
+
+## 📖 Proje Dokümantasyonu
+
+Projenin stratejik vizyonu, pazar analizi, SWOT, yol haritası, bütçe planı ve iş modeli gibi **ayrıntılı bilgiler** için üst dizindeki analiz dokümanına bakın:
+
+📄 **[Proje_Analizi.md](../Proje_Analizi.md)** — *EcoPulse: Kapsamlı Proje Analizi ve Strateji Dokümanı*
+
+Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hedefler, riskler, KPI'lar ve gelecek yol haritası dahil olmak üzere projeyle ilgili kapsamlı ve ayrıntılı bilgiler sunar. Teknik kurulum ve API kullanımı için bu README'yi, ürün ve strateji detayları için **Proje_Analizi.md** dosyasını kullanın.
+
+---
+
+## 👥 ECHO! Ekibi
+
+Bu proje **ECHO!** ekibi tarafından geliştirilmiştir.
+
+| Üye |
+|-----|
+| ESRA ÇEVİK |
+| İBRAHİM KUTAY ŞAHİN |
+| HAZAL PARLAK |
+| FATİH KADİM |
+| EMİR KAYA |
+
 ---
 
 ## 📋 İçindekiler
 
+- [Proje Dokümantasyonu](#-proje-dokümantasyonu)
+- [ECHO! Ekibi](#-echo-ekibi)
 - [Kurulum](#kurulum)
 - [Çalıştırma](#çalıştırma)
 - [Proje Yapısı](#proje-yapısı)
@@ -307,4 +335,5 @@ Bu proje özel kullanım içindir.
 
 ---
 
-**© 2025 ECOLOGIA - ESG Carbon Calculator**
+**© 2025 ECOLOGIA — ESG Carbon Calculator**  
+Geliştiren ekip: **ECHO!** — ESRA ÇEVİK, İBRAHİM KUTAY ŞAHİN, HAZAL PARLAK, FATİH KADİM, EMİR KAYA
