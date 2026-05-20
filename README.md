@@ -12,11 +12,11 @@ Bu depo, ECOLOGIA sürdürülebilirlik ve ESG platformunun teknik uygulamasını
 
 ## 📖 Proje Dokümantasyonu
 
-Projenin stratejik vizyonu, pazar analizi, SWOT, yol haritası, bütçe planı ve iş modeli gibi **ayrıntılı bilgiler** için üst dizindeki analiz dokümanına bakın:
+Projenin stratejik vizyonu, pazar analizi, SWOT, yol haritası, bütçe planı ve iş modeli gibi **ayrıntılı bilgiler** için `docs/` altındaki analiz dokümanına bakın:
 
-📄 **[Proje_Analizi.md](../Proje_Analizi.md)** — *EcoPulse: Kapsamlı Proje Analizi ve Strateji Dokümanı*
+📄 **[Proje_Analizi.md](./docs/Proje_Analizi.md)** — *EcoPulse: Kapsamlı Proje Analizi ve Strateji Dokümanı*
 
-Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hedefler, riskler, KPI'lar ve gelecek yol haritası dahil olmak üzere projeyle ilgili kapsamlı ve ayrıntılı bilgiler sunar. Teknik kurulum ve API kullanımı için bu README'yi, ürün ve strateji detayları için **Proje_Analizi.md** dosyasını kullanın.
+Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hedefler, riskler, KPI'lar ve gelecek yol haritası dahil olmak üzere projeyle ilgili kapsamlı ve ayrıntılı bilgiler sunar. Teknik kurulum ve API kullanımı için bu README'yi, ürün ve strateji detayları için **[Proje_Analizi.md](./docs/Proje_Analizi.md)** dosyasını kullanın.
 
 ---
 
@@ -25,6 +25,7 @@ Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hede
 ## 📋 İçindekiler
 
 - [Proje Dokümantasyonu](#-proje-dokümantasyonu)
+- [Proje Analizi (strateji dokümanı)](./docs/Proje_Analizi.md)
 - [Kurulum](#kurulum)
 - [Çalıştırma](#çalıştırma)
 - [Proje Yapısı](#proje-yapısı)
@@ -203,6 +204,7 @@ ESG_project/
 │   └── emission_calculator.py
 │
 ├── docs/                       # Geliştirme planları ve dokümantasyon
+│   ├── Proje_Analizi.md       # Strateji, SWOT, yol haritası, KPI (ana analiz)
 │   ├── DURUM_VE_GELISTIRME_PLANI.md
 │   ├── GELISTIRME_PLANI.md
 │   ├── GELISTIRME_TAMAMLANDI.md
