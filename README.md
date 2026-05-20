@@ -6,7 +6,7 @@
 > Kurulum ve çalıştırma komutlarının tamamı bu klasörün içinden çalıştırılmalıdır.  
 > (Üst klasör `Ecopulse_ESG/` yalnızca sarmalayıcıdır; GitHub reposu için `ESG_project/` içeriğini kök olarak kullanın.)
 
-Bu depo, **ECHO!** ekibi tarafından geliştirilen ECOLOGIA sürdürülebilirlik ve ESG platformunun teknik uygulamasını içerir.
+Bu depo, ECOLOGIA sürdürülebilirlik ve ESG platformunun teknik uygulamasını içerir.
 
 ---
 
@@ -20,19 +20,7 @@ Bu dosya; problem tanımı, önerilen çözüm mimarisi, hedef kitle, SMART hede
 
 ---
 
-## 👥 ECHO! Ekibi
 
-Bu proje **ECHO!** ekibi tarafından geliştirilmiştir.
-
-| Üye |
-|-----|
-| ESRA ÇEVİK |
-| İBRAHİM KUTAY ŞAHİN |
-| HAZAL PARLAK |
-| FATİH KADİM |
-| EMİR KAYA |
-
----
 
 ## 📋 İçindekiler
 
@@ -47,7 +35,7 @@ Bu proje **ECHO!** ekibi tarafından geliştirilmiştir.
 
 ---
 
-## 🚀 Kurulum
+##  Kurulum
 
 ### Gereksinimler
 - Python 3.10+
@@ -336,4 +324,16 @@ Bu proje özel kullanım içindir.
 ---
 
 **© 2025 ECOLOGIA — ESG Carbon Calculator**  
-Geliştiren ekip: **ECHO!** — ESRA ÇEVİK, İBRAHİM KUTAY ŞAHİN, HAZAL PARLAK, FATİH KADİM, EMİR KAYA
+## 👥 ECHO! Ekibi
+
+Bu proje **ECHO!** ekibi tarafından geliştirilmiştir.
+
+| Üye |
+|-----|
+| ESRA ÇEVİK |
+| İBRAHİM KUTAY ŞAHİN |
+| HAZAL PARLAK |
+| FATİH KADİM |
+| EMİR KAYA |
+
+---
