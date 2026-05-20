@@ -11,13 +11,11 @@ from pathlib import Path
 from datetime import datetime
 from typing import AsyncGenerator
 
-# Add backend directory to path
-# __file__ = ecologia/backend/app/api/v1/report.py
-# parent.parent.parent.parent = ecologia/backend
-# We need ecologia directory
-backend_dir = Path(__file__).parent.parent.parent.parent  # ecologia/backend
-ecologia_dir = backend_dir.parent  # ecologia
-sys.path.insert(0, str(ecologia_dir))
+# Add project root to path
+# __file__ = backend/app/api/v1/report.py -> project root = backend_dir.parent
+backend_dir = Path(__file__).parent.parent.parent.parent
+project_root = backend_dir.parent
+sys.path.insert(0, str(project_root))
 
 from app.models.schemas import (
     ReportGenerateRequest, 
@@ -140,8 +138,8 @@ async def generate_report_stream(request: ReportGenerateRequest):
                 safe_company = safe_filename(request.company_name)
                 filename = f"esg_report_{safe_company}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
             
-            # Output directory (ecologia/output)
-            output_dir = ecologia_dir / "output"
+            # Output directory (output/)
+            output_dir = project_root / "output"
             output_dir.mkdir(exist_ok=True)
             filepath = output_dir / filename
             
@@ -319,7 +317,7 @@ async def generate_report_stream(request: ReportGenerateRequest):
 
 def save_report_metadata(filename: str, company_name: str, period: str, filepath: Path):
     """Save report metadata to JSON file"""
-    metadata_file = ecologia_dir / "output" / "reports_metadata.json"
+    metadata_file = project_root / "output" / "reports_metadata.json"
     
     # Load existing metadata
     reports = []
@@ -355,7 +353,7 @@ def save_report_metadata(filename: str, company_name: str, period: str, filepath
 async def list_reports():
     """List all generated reports"""
     try:
-        output_dir = ecologia_dir / "output"
+        output_dir = project_root / "output"
         metadata_file = output_dir / "reports_metadata.json"
         
         reports = []
@@ -409,7 +407,7 @@ async def delete_report(filename: str):
         from urllib.parse import unquote
         filename = unquote(filename)
         
-        output_dir = ecologia_dir / "output"
+        output_dir = project_root / "output"
         filepath = output_dir / filename
         
         if not filepath.exists():
@@ -468,7 +466,7 @@ async def download_report(filename: str):
         
         # Check both reports and output directories
         reports_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))), "reports")
-        output_dir = ecologia_dir / "output"
+        output_dir = project_root / "output"
         
         # Try multiple filename variations
         possible_names = [

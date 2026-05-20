@@ -21,12 +21,10 @@ from pathlib import Path
 import re
 import numpy as np
 
-# Add parent directory to path for imports
-# __file__ = ecologia/backend/app/services/report_generator_fixed.py
-# parent.parent.parent.parent = ecologia
+# backend/app/services/ -> backend/
 backend_dir = Path(__file__).parent.parent.parent.parent
-ecologia_dir = backend_dir  # backend_dir zaten ecologia
-sys.path.insert(0, str(ecologia_dir))
+project_root = backend_dir.parent
+sys.path.insert(0, str(backend_dir))
 
 from app.services.climatiq_service import EmissionResult
 from app.services.esg_content_generator import ESGReportContentGenerator
@@ -567,9 +565,8 @@ Veri kalitesi: Birincil veri (ölçüm ve faturalar)
         """ESG raporu oluştur - Tüm sorunlar düzeltildi"""
         self._update_progress("Rapor oluşturma başlatılıyor...")
 
-        # Output klasörüne kaydet (ecologia/output)
-        # backend_dir zaten ecologia klasörü
-        output_dir = backend_dir / "output"
+        # Proje kökündeki output/ klasörüne kaydet
+        output_dir = project_root / "output"
         output_dir.mkdir(exist_ok=True)
         filepath = output_dir / filename
 

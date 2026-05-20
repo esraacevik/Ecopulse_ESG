@@ -143,7 +143,7 @@ POST /api/v1/ml/forecast
 1. **OpenWeather API Key**
    - File: `yeni_veri_setleri/openweatherapi`
    - Or environment variable: `OPENWEATHER_API_KEY`
-   - Backend config: `ecologia/backend/app/config.py`
+   - Backend config: `backend/app/config.py`
 
 2. **World Weather Repository**
    - File: `yeni_veri_setleri/World Weather Repository ( Daily Updating )/GlobalWeatherRepository.csv`
@@ -175,7 +175,7 @@ POST /api/v1/ml/forecast
 Run comprehensive tests:
 
 ```bash
-cd ecologia/modeller
+cd modeller
 python tests/test_weather_service.py
 ```
 

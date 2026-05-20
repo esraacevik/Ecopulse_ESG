@@ -70,5 +70,13 @@ frontend/.npm
 frontend/out/
 frontend/dist/
 
+# JSON verileri yalnizca data/ altinda tutulur (kok kopyalari ignore)
+/scope1_data.json
+/scope2_data.json
+/summary.json
+/emission_data_input.json
+/scope3_data.json
+/streamlit/*.json
+
 # Large data files (will be tracked with Git LFS)
-# These are explicitly tracked, not ignored
+# These are explicitly tracked in data/, not ignored

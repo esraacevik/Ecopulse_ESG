@@ -7,17 +7,14 @@ import json
 import os
 from typing import List, Dict, Optional
 from collections import Counter
-from pathlib import Path
 
 class ActivityDatabase:
     """Climatiq emission factor veritabani yoneticisi"""
 
     def __init__(self):
-        # backend/app/services/activity_database.py -> proje kökü -> data/
-        current_file = Path(__file__)
-        project_root = current_file.parent.parent.parent.parent
+        from pathlib import Path
+        project_root = Path(__file__).resolve().parent.parent
         self.data_dir = project_root / "data"
-        
         self.scope1_data = []
         self.scope2_data = []
         self.scope3_data = []
@@ -40,7 +37,7 @@ class ActivityDatabase:
                 with open(scope2_path, 'r', encoding='utf-8') as f:
                     self.scope2_data = json.load(f)
 
-            # Scope 3 (opsiyonel — dosya yoksa boş liste)
+            # Scope 3 (opsiyonel)
             scope3_path = self.data_dir / 'scope3_data.json'
             if scope3_path.exists():
                 with open(scope3_path, 'r', encoding='utf-8') as f:
@@ -48,12 +45,10 @@ class ActivityDatabase:
 
             self.all_data = self.scope1_data + self.scope2_data + self.scope3_data
 
-            print(f"[OK] Yuklendi: {len(self.scope1_data)} Scope 1, {len(self.scope2_data)} Scope 2, {len(self.scope3_data)} Scope 3, Toplam: {len(self.all_data)}")
+            print(f"[OK] Yuklendi: {len(self.scope1_data)} Scope 1, {len(self.scope2_data)} Scope 2, {len(self.scope3_data)} Scope 3")
 
         except Exception as e:
             print(f"[HATA] Veri yukleme hatasi: {e}")
-            import traceback
-            traceback.print_exc()
 
     def search_activities(self,
                          query: str = "",
@@ -89,21 +84,11 @@ class ActivityDatabase:
         query_lower = query.lower()
 
         for activity in data:
-            # Query filtresi - name, category, sector, description, activity_id'de ara
+            # Query filtresi
             if query:
-                name_match = query_lower in activity.get('name', '').lower()
-                category_match = query_lower in activity.get('category', '').lower()
-                sector_match = query_lower in activity.get('sector', '').lower()
-                description_match = query_lower in activity.get('description', '').lower()
-                activity_id_match = query_lower in activity.get('activity_id', '').lower()
-                
-                if not (name_match or category_match or sector_match or description_match or activity_id_match):
-                    continue
-
-            # Scope filtresi - scopes array'ini kontrol et
-            if scope:
-                activity_scopes = activity.get('scopes', [])
-                if scope not in activity_scopes:
+                if not (query_lower in activity.get('name', '').lower() or
+                       query_lower in activity.get('category', '').lower() or
+                       query_lower in activity.get('sector', '').lower()):
                     continue
 
             # Kategori filtresi
@@ -211,3 +196,47 @@ class ActivityDatabase:
             "regions": len(self.get_regions())
         }
 
+
+# Test
+if __name__ == "__main__":
+    print("="*60)
+    print("ACTIVITY DATABASE TEST")
+    print("="*60)
+
+    db = ActivityDatabase()
+
+    # Istatistikler
+    stats = db.get_stats()
+    print(f"\n[STATS]")
+    print(f"Total: {stats['total']:,}")
+    print(f"Scope 1: {stats['scope1']:,}")
+    print(f"Scope 2: {stats['scope2']:,}")
+    print(f"Scope 3: {stats['scope3']:,}")
+    print(f"Categories: {stats['categories']}")
+    print(f"Regions: {stats['regions']}")
+
+    # Test: Elektrik ara
+    print(f"\n[TEST 1] 'electricity' arama (Scope 2):")
+    results = db.search_activities(query="electricity", scope="2", limit=5)
+    for i, activity in enumerate(results, 1):
+        print(f"{i}. {activity['name'][:60]} ({activity['region']})")
+
+    # Test: Dogalgaz ara
+    print(f"\n[TEST 2] 'natural gas' arama (Scope 1):")
+    results = db.search_activities(query="natural gas", scope="1", limit=5)
+    for i, activity in enumerate(results, 1):
+        print(f"{i}. {activity['name'][:60]} ({activity['region']})")
+
+    # Test: Populer aktiviteler
+    print(f"\n[TEST 3] Populer aktiviteler:")
+    popular = db.get_popular_activities(top_n=10)
+    for i, activity in enumerate(popular, 1):
+        print(f"{i}. {activity['name'][:60]} (Scope {activity['scopes'][0]})")
+
+    # Test: Kategoriler
+    print(f"\n[TEST 4] Ilk 10 kategori:")
+    categories = db.get_categories()[:10]
+    for cat in categories:
+        print(f"  - {cat}")
+
+    print("\n" + "="*60)

@@ -3,7 +3,7 @@
 ## ✅ Weather Servisleri Durumu
 
 ### 1. **WeatherService (Unified Service)**
-**Dosya**: `ecologia/modeller/services/weather_service.py`
+**Dosya**: `modeller/services/weather_service.py`
 
 **Özellikler**:
 - ✅ OpenWeather API entegrasyonu (real-time)
@@ -17,7 +17,7 @@
 3. **Forecast**: OpenWeather API kullanır (5 gün)
 
 ### 2. **OpenWeather API Client**
-**Dosya**: `ecologia/modeller/services/openweather_client.py`
+**Dosya**: `modeller/services/openweather_client.py`
 
 **Özellikler**:
 - ✅ API key yönetimi (env variable veya dosyadan)
@@ -30,7 +30,7 @@
 - Dosya: `yeni_veri_setleri/openweatherapi`
 
 ### 3. **World Weather Repository Loader**
-**Dosya**: `ecologia/modeller/services/weather_repo_loader.py`
+**Dosya**: `modeller/services/weather_repo_loader.py`
 
 **Özellikler**:
 - ✅ CSV'den historical weather data yükleme
@@ -42,7 +42,7 @@
 
 ### Feature Engineering'de Weather Kullanımı
 
-**Dosya**: `ecologia/modeller/models/energy_prediction/feature_engineer.py`
+**Dosya**: `modeller/models/energy_prediction/feature_engineer.py`
 
 **Akış**:
 ```
@@ -69,7 +69,7 @@
 
 ### API Endpoint'te Weather Kullanımı
 
-**Dosya**: `ecologia/modeller/api/ml_routes.py`
+**Dosya**: `modeller/api/ml_routes.py`
 
 **Akış**:
 ```
@@ -110,7 +110,7 @@ Time,total_power,HVAC_Actual_kW,Chiller_Power_kW,Humidifier_power_kW,HV_light_Po
 
 ## 🧪 Test Verisi
 
-**Dosya**: `ecologia/modeller/test_data_example.csv`
+**Dosya**: `modeller/test_data_example.csv`
 
 **İçerik**:
 - ✅ 150+ satır örnek veri
@@ -121,7 +121,7 @@ Time,total_power,HVAC_Actual_kW,Chiller_Power_kW,Humidifier_power_kW,HV_light_Po
 **Kullanım**:
 ```bash
 # Test verisini kopyala
-cat ecologia/modeller/test_data_example.csv
+cat modeller/test_data_example.csv
 
 # Frontend'de ML Dashboard → Tüketim Tahmini
 # CSV içeriğini yapıştır ve tahmin oluştur

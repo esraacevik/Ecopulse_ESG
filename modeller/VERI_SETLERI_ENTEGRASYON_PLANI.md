@@ -121,7 +121,7 @@
 
 #### Dosya Yapısı
 ```
-ecologia/modeller/
+modeller/
 ├── services/
 │   ├── __init__.py
 │   ├── weather_service.py          # Unified weather interface
@@ -178,7 +178,7 @@ class WeatherService:
 
 **A. Feature Engineering Güncellemesi**
 ```python
-# ecologia/modeller/models/energy_prediction/feature_engineer.py
+# modeller/models/energy_prediction/feature_engineer.py
 
 class EnergyFeatureEngineer:
     def __init__(self, include_weather: bool = True):
@@ -246,7 +246,7 @@ class EnergyFeatureEngineer:
 
 **A. Model Training Data**
 ```python
-# ecologia/modeller/models/energy_prediction/data_loader.py
+# modeller/models/energy_prediction/data_loader.py
 
 class EnergyDataLoader:
     def load_eia_data(self, region: str = "US48") -> pd.DataFrame:
@@ -383,7 +383,7 @@ class EnergyDataLoader:
 
 #### Implementation
 ```python
-# ecologia/backend/app/services/vehicle_emission_calculator.py
+# backend/app/services/vehicle_emission_calculator.py
 
 class VehicleEmissionCalculator:
     def __init__(self):
@@ -442,7 +442,7 @@ class VehicleEmissionCalculator:
 #### Symlink veya Kopya?
 ```python
 # Seçenek 1: Symlink (disk tasarrufu)
-# ecologia/modeller/data/raw/
+# modeller/data/raw/
 #   ├── weather_repo.csv -> ../../yeni_veri_setleri/World Weather Repository/GlobalWeatherRepository.csv
 #   ├── eia_data/ -> ../../yeni_veri_setleri/US EIA hourly electiricty consumption/data/
 #   └── ...
@@ -465,7 +465,7 @@ class VehicleEmissionCalculator:
 ### 3. Data Preprocessing Pipeline
 
 ```python
-# ecologia/modeller/utils/data_preprocessing.py
+# modeller/utils/data_preprocessing.py
 
 class DataPreprocessor:
     def preprocess_weather_data(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -488,7 +488,7 @@ class DataPreprocessor:
 ### 4. Feature Store
 
 ```python
-# ecologia/modeller/utils/feature_store.py
+# modeller/utils/feature_store.py
 
 class FeatureStore:
     """
